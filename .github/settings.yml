@@ -1,0 +1,4 @@
+_extends: .github
+repository:
+  name: scripts
+  description: Collection of octoherd scripts
