@@ -1,0 +1,16 @@
+{
+  "name": "scripts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A repository full of octoherd scripts",
+  "main": "index.js",
+  "keywords": [
+    "octoherd"
+  ],
+  "author": "Gregor Martynus (https://twitter.com/gr2m)",
+  "license": "ISC",
+  "devDependencies": {
+    "@octokit/core": "^3.2.4",
+    "@octokit/openapi-types": "^2.0.0"
+  }
+}
