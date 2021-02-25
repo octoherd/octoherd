@@ -1,13 +1,11 @@
-module.exports.script = starOrUnstarScript;
-
 /**
- * Example script that stars or unstars the passed repository based on the `--unstar` CLI option
+ * stars or unstars the passed repository based on the `unstar` option
  *
- * @param {import('@octokit/core').Octokit} octokit
+ * @param {import('@octoherd/octokit').Octokit} octokit
  * @param {import('@octokit/openapi-types').components["schemas"]["repository"]} repository
- * @param {object} options Custom user options passed to the CLI
+ * @param { {unstar?: boolean} } options Custom user options passed to the CLI
  */
-async function starOrUnstarScript(octokit, repository, options) {
+export async function script(octokit, repository, options) {
   const method = options.unstar ? "DELETE" : "PUT";
 
   // https://docs.github.com/en/rest/reference/activity#star-a-repository-for-the-authenticated-user

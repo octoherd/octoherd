@@ -1,13 +1,11 @@
-module.exports.script = removeDependabot;
-
 /**
  * Create a CODE_OF_CONDUCT.md file unless it already exists.
  * Ignores forks and archived repositories
  *
- * @param {import('@octokit/core').Octokit} octokit
+ * @param {import('@octoherd/octokit').Octokit} octokit
  * @param {import('@octokit/openapi-types').components["schemas"]["repository"]} repository
  */
-async function removeDependabot(octokit, repository) {
+export async function script(octokit, repository) {
   if (repository.archived) {
     octokit.log.info(`${repository.html_url} is archived, ignoring.`);
     return;
