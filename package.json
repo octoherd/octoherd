@@ -2,8 +2,8 @@
   "name": "scripts",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "A repository full of octoherd scripts",
-  "main": "index.js",
   "keywords": [
     "octoherd"
   ],
