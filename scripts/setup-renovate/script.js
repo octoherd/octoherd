@@ -1,14 +1,11 @@
-module.exports.script = setupRenovate;
-
 /**
- * Create a CODE_OF_CONDUCT.md file unless it already exists.
- * Ignores forks and archived repositories
+ * Setup renovate by adding `{"renovate": {"extends": "..."}}` to the package.json
  *
- * @param {import('@octokit/core').Octokit} octokit
+ * @param {import('@octoherd/octokit').Octokit} octokit
  * @param {import('@octokit/openapi-types').components["schemas"]["repository"]} repository
- * @param {object} options Custom user options passed to the CLI
+ * @param { {extends: string} } options Custom user options passed to the CLI
  */
-async function setupRenovate(octokit, repository, options) {
+export async function script(octokit, repository, options) {
   if (!options.extends) {
     throw new Error(`--extends is required`);
   }

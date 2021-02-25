@@ -9,7 +9,7 @@ At this point, this script adds / updates a repository's `package.json` file. Re
 ```
 git clone https://github.com/octoherd/scripts.git
 $ npx @octoherd/cli \
-  --token 0123456789012345678901234567890123456789 \
+  --octoherd-token 0123456789012345678901234567890123456789 \
   scripts/scripts/setup-renovate/script.js \
   "octokit/*" \
   --extends "github>octokit/.github"
