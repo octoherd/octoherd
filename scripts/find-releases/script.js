@@ -29,10 +29,17 @@ export async function script(octokit, repository, options) {
   octokit.log.info(
     {
       releases: releases.map((release) => {
+        const type = /\.0\.0$/.test(release.tag_name)
+          ? "breaking"
+          : /\.0$/.test(release.tag_name)
+          ? "feature"
+          : "fix";
+
         return {
           created_at: release.created_at,
           version: release.tag_name,
           notes: release.body,
+          type,
         };
       }),
       repository: [owner, repo].join("/"),
