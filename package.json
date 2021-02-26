@@ -10,7 +10,7 @@
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "license": "ISC",
   "devDependencies": {
-    "@octoherd/octokit": "^2.1.0",
+    "@octoherd/octokit": "^2.2.0",
     "@octokit/openapi-types": "^2.0.0"
   },
   "dependencies": {}
