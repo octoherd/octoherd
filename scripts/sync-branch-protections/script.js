@@ -64,9 +64,6 @@ export async function script(octokit, repository, options) {
       branch: repository.default_branch,
     };
 
-    console.log(`urlParameters`);
-    console.log(urlParameters);
-
     try {
       const { data } = await octokit.request(
         "GET /repos/{owner}/{repo}/branches/{branch}/protection",
