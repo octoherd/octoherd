@@ -7,7 +7,7 @@ let templateBranchProtectionSettings;
  *
  * @param {import('@octoherd/octokit').Octokit} octokit
  * @param {import('@octokit/openapi-types').components["schemas"]["repository"]} repository
- * @param { {check: string} } options Custom user options passed to the CLI
+ * @param { {template: string} } options Custom user options passed to the CLI
  */
 export async function script(octokit, repository, options) {
   if (!options.template) {
