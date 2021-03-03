@@ -22,10 +22,10 @@ export async function createRepositoryFromFolder(
     "Create License",
     "Create Code of Conduct",
     "Create Readme",
-    "Create release workflow",
     "Create package.json & package-lock.json",
     "Create .gitignore",
     "Create script files",
+    "Create release workflow",
   ];
   const owner = repository.owner.login;
 
@@ -46,9 +46,6 @@ export async function createRepositoryFromFolder(
     await createReadme(octokit, owner, newRepoName, contents.readme);
     steps.shift();
 
-    await createReleaseWorkflow(octokit, owner, newRepoName);
-    steps.shift();
-
     await createPackage(
       octokit,
       owner,
@@ -63,6 +60,9 @@ export async function createRepositoryFromFolder(
     steps.shift();
 
     await createScriptFiles(octokit, repository, newRepoName, path);
+    steps.shift();
+
+    await createReleaseWorkflow(octokit, owner, newRepoName);
     steps.shift();
   } catch (error) {
     octokit.log.error(
@@ -415,7 +415,7 @@ async function createScriptFiles(octokit, sourceRepository, repo, path) {
       repo,
       path: item.name,
       content: Buffer.from(content, "utf8").toString("base64"),
-      message: "ci: release",
+      message: "feat: initial version",
     });
   }
 }
