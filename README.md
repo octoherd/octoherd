@@ -10,4 +10,4 @@ To create your own script, see [octoherd/create-octoherd-script](https://github.
 
 ## License
 
-[ISC](LICENSE)
+[ISC](LICENSE.md)
