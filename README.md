@@ -6,6 +6,8 @@ It's early days, `octoherd` is under heavy development. It's a great time to get
 
 For existing scripts, check out [repositories with the `octoherd-script` label](https://github.com/topics/octoherd-script).
 
+To create your own script, see [octoherd/create-octoherd-script](https://github.com/octoherd/create-octoherd-script)
+
 ## License
 
 [ISC](LICENSE)
