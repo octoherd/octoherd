@@ -13,5 +13,6 @@
     "@octoherd/octokit": "^2.2.0",
     "@octokit/openapi-types": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": "github:octoherd/octoherd"
 }
