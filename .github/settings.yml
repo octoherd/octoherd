@@ -1,4 +1,4 @@
 _extends: .github
 repository:
-  name: scripts
-  description: Collection of octoherd scripts
+  name: Octoherd
+  description: Manage multiple repository updates all at once.
